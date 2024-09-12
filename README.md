@@ -1,4 +1,4 @@
-# Data cleaning & EDA (with Python) of the Kaggle Dataset
+# Data cleaning & EDA (with Python) of the Titanic Kaggle Dataset
 
 * Pandas and NumPy are used for data manipulation and mathematical operations, respectively.
 
