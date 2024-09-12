@@ -1,5 +1,7 @@
 # Data cleaning & EDA (with Python) of the Titanic Kaggle Dataset
 
+![Titanic Ship](https://github.com/hazelapondi/FUTURE_DS_01/blob/main/img/titanic.jpg)
+
 * Pandas and NumPy are used for data manipulation and mathematical operations, respectively.
 
 * Matplotlib and Seaborn are visualization libraries.
