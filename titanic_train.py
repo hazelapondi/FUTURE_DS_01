@@ -29,10 +29,14 @@ sns.countplot(x = 'Survived', data = train)
 #survival count based on gender
 sns.set_style('whitegrid')
 sns.countplot(x = 'Survived', hue = 'Sex', data = train, palette = 'RdBu_r')
+plt.title('Survival Rate by Gender')
+plt.show()
 
 #survival count based on passenger class (Pclass)
 sns.set_style('whitegrid')
 sns.countplot(x = 'Survived', hue = 'Pclass', data = train, palette = 'rainbow')
+plt.title('Survival rate by Passenger Class')
+plt.show()
 
 #Age distribtion of passengers
 sns.distplot(train['Age'].dropna(), kde = False, color = 'darkred', bins = 40)
@@ -44,6 +48,8 @@ sns.countplot(x = 'SibSp', data = train)
 
 #Fare distribution
 train['Fare'].hist(color = 'green', bins = 40, figsize = (8,4))
+plt.title('Fare Distribution')
+plt.show()
 
 #Correlation matrix
 plt.figure(figsize=(10, 8))
@@ -51,7 +57,7 @@ sns.heatmap(train.corr(), annot=True, cmap='coolwarm', linewidths=0.5)
 plt.title('Correlation Matrix')
 plt.show()
 
-#check the average age by passenger class using a boxplot of Age by Pclass
+#check the average Age by Passenger Class using a boxplot
 plt.figure(figsize=(12,7))
 sns.boxplot(x = 'Pclass', y = 'Age', data = train, palette = 'winter')
 
@@ -73,7 +79,7 @@ def impute_age(cols):
 #apply the function impute_age
 train['Age'] = train[['Age', 'Pclass']].apply(impute_age, axis = 1)
 
-#check heat map to establish missing values
+#check heat map again to establish missing values 
 sns.heatmap(train.isnull(), yticklabels = False, cbar = False, cmap = 'viridis')
 
 #drop the Cabin column and the rows with value NaN
@@ -107,7 +113,7 @@ X_train, X_test, y_train, y_test = train_test_split(trian.drop('Survived', axis 
 #Logistic Regression Model
 from sklearn.linear_model import LogisticRegression
 
-logmodel = LogiticRegression()
+logmodel = LogisticRegression()
 logmodel.fit(X_train, y_train)
 
 #making predictions
@@ -117,11 +123,6 @@ predictions = logmodel.predict(X_test)
 from sklearn.metrics import confusion_matrix, accuracy_score
 
 conf_matrix = confusion_matrix(y_test, predictions)
-accuracy = accuracy.score(y_test, predictions)
+accuracy = accuracy_score(y_test, predictions)
 
 predictions
-
-
-
-
-
