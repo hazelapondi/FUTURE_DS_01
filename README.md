@@ -8,7 +8,7 @@
 
 * %matplotlib inline is used to display plots inline in a Jupyter notebook
 
-> From our exploration, we establish among aother discoveries, that higher-class passengers generally had better survival rates and typically, older passengers were in higher classes.
+> From our exploration, we establish among other discoveries that higher-class passengers generally had better survival rates, and older passengers were typically in higher classes.
 
 As part of our data cleaning:
 
