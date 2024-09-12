@@ -13,7 +13,7 @@
 As part of our data cleaning:
 
 * The Cabin column is dropped because it contains too many missing values.
-* Rows with missing Embarked values are also dropped.
+* Rows with missing values are also dropped.
 
 When performing Logistic Regression:
 
