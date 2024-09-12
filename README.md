@@ -17,3 +17,10 @@ When performing Logistic Regression:
 
 * A confusion matrix is created to evaluate the model's predictions.
 * The accuracy score is calculated to determine how well the model performed on the test set.
+
+Based on the EDA, these are the key insights gleaned:
+
+* Survival Rate by Gender: Females had a higher survival rate compared to males.
+* Survival Rate by Class: Passengers in 1st class had a significantly higher survival rate than those in 3rd class.
+* Age Distribution: Most passengers were young adults, with some children and older individuals.
+* Embarked Port: Most passengers embarked from Southampton.
